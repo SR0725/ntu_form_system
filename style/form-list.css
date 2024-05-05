@@ -2,6 +2,51 @@ body {
   background: #fdf9f9;
 }
 
+.header {
+  padding: 24px 96px;
+  box-shadow: 0px 2px 10px 0px #00000012;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.header .title {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 33.6px;
+  color: #0d0d0d;
+}
+
+.header .info {
+  display: flex;
+  gap: 40px;
+}
+
+.header .info .btn {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #60646c;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.header .info .avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #f9edec;
+  color: #9a412a;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-list-container {
   display: flex;
   flex-direction: column;
@@ -50,6 +95,10 @@ body {
   line-height: 30.4px;
   color: #000;
   margin: 0;
+}
+
+.form-list-container a {
+  text-decoration: none;
 }
 
 .btn {
