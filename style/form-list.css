@@ -3,12 +3,17 @@ body {
 }
 
 .form-list-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #fdf9f9;
   padding: 95px 96px;
+  gap: 16px;
+}
+
+.form-list-action {
+  width: 100%;
+  display: flex;
 }
 
 .form-list {
@@ -19,7 +24,6 @@ body {
 }
 
 .form-list-item {
-  height: 64px;
   padding: 16px 32px;
   display: flex;
   justify-content: space-between;
@@ -48,7 +52,7 @@ body {
   margin: 0;
 }
 
-.form-list-item .form-list-item-action .btn-edit {
+.btn {
   background: #f9edec;
   color: #9a412a;
   border: 1px solid #e8b2aa;
@@ -64,7 +68,7 @@ body {
   gap: 11px;
 }
 
-.form-list-item .form-list-item-action .btn-edit .pen {
+.btn .btn-icon {
   color: #9a412a;
   font-size: 12px;
 }
