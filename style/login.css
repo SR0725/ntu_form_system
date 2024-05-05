@@ -1,3 +1,17 @@
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #b9bbc6;
+  border-radius: 5px;
+  padding: 0 10px;
+  color: #60646c;
+}
+
+.btn {
+  background-color: #d65b3a;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -41,6 +55,10 @@
 .login-form .form-group {
   margin-bottom: 51px;
   display: flex;
+  flex-direction: column;
+}
+.login-form .form-group .input-group {
+  display: flex;
   gap: 15px;
 }
 .login-form .form-group label {
@@ -57,6 +75,9 @@
   flex-grow: 1;
   font-size: 13px;
   font-weight: 400;
+}
+.login-form .form-group .error-message {
+  margin-left: 50px;
 }
 
 .login-form .form-submit {

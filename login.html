@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>國立台灣大學意見回饋表單管理系統</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,13 +12,8 @@
     />
     <link rel="stylesheet" href="./style/login.css" />
     <link rel="stylesheet" href="./style/common.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="./script/login.js"></script>
+    <script src="./script/jquery.min.js"></script>
   </head>
   <body>
     <main class="form-container">
@@ -41,22 +30,28 @@
       </div>
       <form class="login-form" id="login-form">
         <div class="form-group">
-          <label for="username">帳號</label>
-          <input
-            type="text"
-            class="form-control"
-            id="username"
-            placeholder="請輸入你的帳號"
-          />
+          <div class="input-group">
+            <label for="username">帳號</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="請輸入你的帳號"
+            />
+          </div>
+          <span class="error-message" style="color: red; display: none"></span>
         </div>
         <div class="form-group">
-          <label for="username">密碼</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            placeholder="請輸入你的密碼"
-          />
+          <div class="input-group">
+            <label for="username">密碼</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="請輸入你的密碼"
+            />
+          </div>
+          <span class="error-message" style="color: red; display: none"></span>
         </div>
         <div class="form-submit">
           <button type="submit" class="btn btn-primary btn-submit">登入</button>
