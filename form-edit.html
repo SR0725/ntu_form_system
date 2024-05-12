@@ -41,7 +41,7 @@
     </header>
     <main class="form-container">
       <div class="question-list">
-        <div class="question-block group-question">
+        <div class="template-question-block group-question">
           <div class="question-action-order">
             <button class="rounded-btn btn-up">
               <span class="material-symbols-outlined btn-icon">
@@ -79,7 +79,7 @@
             </button>
           </div>
         </div>
-        <div class="question-block description-question">
+        <div class="template-question-block description-question">
           <div class="question-action-order">
             <button class="rounded-btn btn-up">
               <span class="material-symbols-outlined btn-icon">
@@ -133,7 +133,7 @@
             </button>
           </div>
         </div>
-        <div class="question-block choice-question">
+        <div class="template-question-block choice-question">
           <div class="question-action-order">
             <button class="rounded-btn btn-up">
               <span class="material-symbols-outlined btn-icon">
@@ -165,21 +165,7 @@
             <input type="text" placeholder="輸入備註" />
           </div>
           <div class="question-body">
-            <div class="choice">
-              <input type="radio" name="choice" />
-              <input type="text" placeholder="選項" />
-              <button class="btn-delete-choice">
-                <span class="material-symbols-outlined btn-icon"> close </span>
-              </button>
-            </div>
-            <div class="choice">
-              <input type="radio" name="choice" />
-              <input type="text" placeholder="選項" />
-              <button class="btn-delete-choice">
-                <span class="material-symbols-outlined btn-icon"> close </span>
-              </button>
-            </div>
-            <div class="choice">
+            <div class="template-choice">
               <input type="radio" name="choice" />
               <input type="text" placeholder="選項" />
               <button class="btn-delete-choice">
@@ -194,13 +180,13 @@
               </span>
               <span> 新增「其他」 </span>
             </button>
-            <button class="btn btn-action btn-add">
+            <button class="btn btn-action btn-add btn-add-choice">
               <span class="material-symbols-outlined btn-icon"> add </span>
               <span> 新增選項 </span>
             </button>
           </div>
         </div>
-        <div class="question-block multiple-choice-question">
+        <div class="template-question-block multiple-choice-question">
           <div class="question-action-order">
             <button class="rounded-btn btn-up">
               <span class="material-symbols-outlined btn-icon">
@@ -232,22 +218,8 @@
             <input type="text" placeholder="輸入備註" />
           </div>
           <div class="question-body">
-            <div class="choice">
+            <div class="template-choice">
               <input type="checkbox" />
-              <input type="text" placeholder="選項" />
-              <button class="btn-delete-choice">
-                <span class="material-symbols-outlined btn-icon"> close </span>
-              </button>
-            </div>
-            <div class="choice">
-              <input type="checkbox" name="choice" />
-              <input type="text" placeholder="選項" />
-              <button class="btn-delete-choice">
-                <span class="material-symbols-outlined btn-icon"> close </span>
-              </button>
-            </div>
-            <div class="choice">
-              <input type="checkbox" name="choice" />
               <input type="text" placeholder="選項" />
               <button class="btn-delete-choice">
                 <span class="material-symbols-outlined btn-icon"> close </span>
@@ -261,13 +233,13 @@
               </span>
               <span> 新增「其他」 </span>
             </button>
-            <button class="btn btn-action btn-add">
+            <button class="btn btn-action btn-add btn-add-choice">
               <span class="material-symbols-outlined btn-icon"> add </span>
               <span> 新增選項 </span>
             </button>
           </div>
         </div>
-        <div class="question-block text-question">
+        <div class="template-question-block text-question">
           <div class="question-action-order">
             <button class="rounded-btn btn-up">
               <span class="material-symbols-outlined btn-icon">
@@ -347,7 +319,7 @@
                 </span>
                 插入題組
               </span>
-              <button class="btn btn-action btn-add">
+              <button class="btn btn-action btn-add" id="add-group-question">
                 <span class="material-symbols-outlined btn-icon"> add </span>
                 <span> 新增 </span>
               </button>
@@ -361,7 +333,10 @@
                 </span>
                 插入文字
               </span>
-              <button class="btn btn-action btn-add">
+              <button
+                class="btn btn-action btn-add"
+                id="add-description-question"
+              >
                 <span class="material-symbols-outlined btn-icon"> add </span>
                 <span> 新增 </span>
               </button>
@@ -375,7 +350,7 @@
                 </span>
                 單選小題
               </span>
-              <button class="btn btn-action btn-add">
+              <button class="btn btn-action btn-add" id="add-choice-question">
                 <span class="material-symbols-outlined btn-icon"> add </span>
                 <span> 新增 </span>
               </button>
@@ -389,7 +364,10 @@
                 </span>
                 複選小題
               </span>
-              <button class="btn btn-action btn-add">
+              <button
+                class="btn btn-action btn-add"
+                id="add-multiple-choice-question"
+              >
                 <span class="material-symbols-outlined btn-icon"> add </span>
                 <span> 新增 </span>
               </button>
@@ -403,7 +381,7 @@
                 </span>
                 簡答小題
               </span>
-              <button class="btn btn-action btn-add">
+              <button class="btn btn-action btn-add" id="add-text-question">
                 <span class="material-symbols-outlined btn-icon"> add </span>
                 <span> 新增 </span>
               </button>

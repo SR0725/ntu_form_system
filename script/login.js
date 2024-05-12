@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#login-form").submit(function (event) {
+  $("#login-form").on("submit", function (event) {
     event.preventDefault();
     var username = $("#username").val();
     var password = $("#password").val();
