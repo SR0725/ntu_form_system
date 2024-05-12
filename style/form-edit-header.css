@@ -1,0 +1,31 @@
+.header {
+  padding: 24px 96px;
+  box-shadow: 0px 2px 10px 0px #00000012;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.header .info {
+  display: flex;
+  gap: 16px;
+}
+
+.header .info .title {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 30.4px;
+  color: #0d0d0d;
+}
+
+.header .info a {
+  text-decoration: none;
+}
+
+.header .action .title {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 30.4px;
+  color: #0d0d0d;
+}

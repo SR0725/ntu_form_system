@@ -1,0 +1,28 @@
+.rounded-btn {
+  background-color: #ebebef;
+  border-radius: 50%;
+  border: 1px solid #d3d4db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #60646c;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.rounded-btn .btn-save {
+  width: 35px;
+  height: 35px;
+}
+.rounded-btn .btn-icon {
+  font-size: 15px;
+}
+.rounded-btn.btn-up,
+.rounded-btn.btn-down {
+  width: 25px;
+  height: 25px;
+}
+.rounded-btn.btn-up .btn-icon,
+.rounded-btn.btn-down .btn-icon {
+  font-size: 15px;
+}

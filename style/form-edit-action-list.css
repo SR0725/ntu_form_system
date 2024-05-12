@@ -1,0 +1,62 @@
+
+.action-list {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.global-form-action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.question-create-action {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.action-container {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0px 2px 10px 0px #00000012;
+}
+
+.action-container .title {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 27.8px;
+  color: #000;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.form-select {
+  border: 1px solid #b9bbc6;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #60646c;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20.8px;
+  width: 100%;
+}
+.action-icon {
+  font-size: 17px;
+}

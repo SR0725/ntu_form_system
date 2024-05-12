@@ -1,0 +1,91 @@
+.btn.btn-save {
+  background-color: #d65b3a;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+}
+.btn.btn-save .btn-icon {
+  font-size: 15px;
+}
+.btn.btn-delete {
+  background: #ffe5e5;
+  color: #c62a2f;
+  border: 1px solid #f3aeaf;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 11px;
+}
+.btn.btn-delete .btn-icon {
+  color: #c62a2f;
+  font-size: 12px;
+}
+.btn.btn-action {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+.btn.btn-action .btn-icon {
+  font-size: 12px;
+}
+
+.btn.btn-add-other {
+  background: #ebebef;
+  color: #60646c;
+  border: 1px solid #d3d4db;
+}
+.btn.btn-add-other .btn-icon {
+  color: #60646c;
+}
+.btn.btn-add {
+  background: #f9edec;
+  color: #9a412a;
+  border: 1px solid #e8b2aa;
+}
+.btn.btn-add .btn-icon {
+  color: #9a412a;
+}
+
+.btn-format {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-format.active {
+  background: #f5dfdc;
+}
+.btn-format.active .btn-icon {
+  color: #d65b3a;
+}
+.btn-delete-choice {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
