@@ -1,3 +1,5 @@
+var sectionIndex = 1;
+
 function addQuestion(questionType) {
   const questionBlock = $(questionType + ".template-question-block")
     .first()
@@ -6,6 +8,11 @@ function addQuestion(questionType) {
     .addClass("question-block")
     .appendTo(".question-list")
     .show();
+
+  if (questionType === ".group-question") {
+    questionBlock.find(".header-title h2").text("第 " + sectionIndex + " 題");
+    sectionIndex++;
+  }
 
   questionBlock.find(".btn-delete").on("click", function () {
     questionBlock.remove();
@@ -36,6 +43,23 @@ function dispatchChoiceListEvent(questionBlock) {
   });
 }
 
+function dispatchDescriptionEvent(questionBlock) {
+  questionBlock.find(".question-mark").hide();
+
+  // 刪除選項的功能
+  questionBlock.on("click", ".btn-add-description", function () {
+    questionBlock.find(".question-mark").show();
+    questionBlock.find(".btn-add-description").hide();
+  });
+}
+
+function dispatchCreateGroupEvent(questionBlock) {
+  questionBlock.on("click", ".btn-add-group", function () {
+    const questionBlock = addQuestion(".group-question");
+    dispatchCreateGroupEvent(questionBlock);
+  });
+}
+
 $(document).ready(function () {
   $("#save-form").on("click", function () {
     alert("Form saved!");
@@ -46,11 +70,14 @@ $(document).ready(function () {
 
   // 設置按鈕的點擊事件
   $("#add-group-question").on("click", function () {
-    addQuestion(".group-question");
+    const questionBlock = addQuestion(".group-question");
+    dispatchCreateGroupEvent(questionBlock);
   });
 
+  // 設置按鈕的點擊事件
   $("#add-description-question").on("click", function () {
-    addQuestion(".description-question");
+    const questionBlock = addQuestion(".description-question");
+    dispatchDescriptionEvent(questionBlock);
   });
 
   $("#add-choice-question").on("click", function () {
@@ -64,6 +91,7 @@ $(document).ready(function () {
   });
 
   $("#add-text-question").on("click", function () {
-    addQuestion(".text-question");
+    const questionBlock = addQuestion(".text-question");
+    dispatchChoiceListEvent(questionBlock);
   });
 });
