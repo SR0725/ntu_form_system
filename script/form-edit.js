@@ -43,6 +43,22 @@ function dispatchChoiceListEvent(questionBlock) {
   });
 }
 
+function dispatchMoveQuestionEvent(questionBlock) {
+  questionBlock.find(".btn-up").on("click", function () {
+    const prevQuestion = questionBlock.prev();
+    if (prevQuestion.length > 0) {
+      questionBlock.insertBefore(prevQuestion);
+    }
+  });
+
+  questionBlock.find(".btn-down").on("click", function () {
+    const nextQuestion = questionBlock.next();
+    if (nextQuestion.length > 0) {
+      questionBlock.insertAfter(nextQuestion);
+    }
+  });
+}
+
 function dispatchDescriptionEvent(questionBlock) {
   questionBlock.find(".question-mark").hide();
 
@@ -72,26 +88,31 @@ $(document).ready(function () {
   $("#add-group-question").on("click", function () {
     const questionBlock = addQuestion(".group-question");
     dispatchCreateGroupEvent(questionBlock);
+    dispatchMoveQuestionEvent(questionBlock);
   });
 
   // 設置按鈕的點擊事件
   $("#add-description-question").on("click", function () {
     const questionBlock = addQuestion(".description-question");
     dispatchDescriptionEvent(questionBlock);
+    dispatchMoveQuestionEvent(questionBlock);
   });
 
   $("#add-choice-question").on("click", function () {
     const questionBlock = addQuestion(".choice-question");
     dispatchChoiceListEvent(questionBlock);
+    dispatchMoveQuestionEvent(questionBlock);
   });
 
   $("#add-multiple-choice-question").on("click", function () {
     const questionBlock = addQuestion(".multiple-choice-question");
     dispatchChoiceListEvent(questionBlock);
+    dispatchMoveQuestionEvent(questionBlock);
   });
 
   $("#add-text-question").on("click", function () {
     const questionBlock = addQuestion(".text-question");
     dispatchChoiceListEvent(questionBlock);
+    dispatchMoveQuestionEvent(questionBlock);
   });
 });
