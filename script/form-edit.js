@@ -34,12 +34,30 @@ function dispatchChoiceListEvent(questionBlock) {
       .removeClass("template-choice")
       .addClass("choice")
       .show();
+    questionBlock.find(".question-body").prepend(choiceDom);
+  });
+
+  // 新增單選或多選選項
+  questionBlock.find(".btn-add-other-choice").on("click", function () {
+    const choiceDom = questionBlock
+      .find(".template-other-choice")
+      .first()
+      .clone()
+      .removeClass("template-other-choice")
+      .removeClass("template-choice")
+      .addClass("choice")
+      .addClass("other-choice")
+      .show();
     questionBlock.find(".question-body").append(choiceDom);
+    questionBlock.find(".btn-add-other-choice").hide();
   });
 
   // 刪除選項的功能
   questionBlock.on("click", ".btn-delete-choice", function () {
     $(this).closest(".choice").remove();
+    if (questionBlock.find(".other-choice").length === 0) {
+      questionBlock.find(".btn-add-other-choice").show();
+    }
   });
 }
 

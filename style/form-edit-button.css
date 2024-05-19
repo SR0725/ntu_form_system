@@ -50,12 +50,12 @@
   font-size: 12px;
 }
 
-.btn.btn-add-other {
+.btn.btn-add-other-choice {
   background: #ebebef;
   color: #60646c;
   border: 1px solid #d3d4db;
 }
-.btn.btn-add-other .btn-icon {
+.btn.btn-add-other-choice .btn-icon {
   color: #60646c;
 }
 .btn.btn-add {
